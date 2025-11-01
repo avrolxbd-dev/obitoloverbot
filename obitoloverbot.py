@@ -19,7 +19,7 @@ def get_user_input():
     return data_type, sheet_link
 
 # Function to print text slowly (typing animation)
-def slow_print(text, color_code="\033[91m", delay=0.002):
+def slow_print(text, color_code="\033[91m", delay=0.00001):
     """Print text with typing animation and color"""
     sys.stdout.write(color_code)  # set color
     for char in text:
@@ -31,7 +31,7 @@ def slow_print(text, color_code="\033[91m", delay=0.002):
 # Function to display logo with animation
 def display_tool_logo():
     print("\n********************************")
-    slow_print(logo, color_code="\033[91m", delay=0.0015)  # red = \033[91m
+    slow_print(logo, color_code="\033[91m", delay=0.05)  # red = \033[91m
     print("********************************\n")
 
 # Function to perform the main task
@@ -40,7 +40,7 @@ def perform_task():
     for i in range(50):
         # Print 'Checked' in green using ANSI escape codes
         print(f"\033[92m{i+1} Checked\033[0m")
-        time.sleep(0.1)
+        time.sleep(0.8)
 
 # Main function to run the tool
 def run_tool():
